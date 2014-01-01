@@ -28,7 +28,7 @@ setup(name='QuoteOfTheDay',
       url='https://github.com/andresriancho/qotd',
       description='A simple quote of the day script users can invoke from their'
                   ' home directories without modifying /etc/motd.',
-      long_description=open('README', 'r').read(),
+      long_description=open('README.rst', 'r').read(),
       classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
