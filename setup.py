@@ -13,11 +13,12 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from distutils.core import setup
+from setuptools import setup, find_packages
+from os.path import join, dirname
 
 
 setup(name='QuoteOfTheDay',
-      version='0.7.2',
+      version='0.7.4',
 
       author='Yuen Ho Wong',
       author_email='wyuenho@gmail.com',
@@ -28,7 +29,16 @@ setup(name='QuoteOfTheDay',
       url='https://github.com/andresriancho/qotd',
       description='A simple quote of the day script users can invoke from their'
                   ' home directories without modifying /etc/motd.',
-      long_description=open('README.rst', 'r').read(),
+      long_description=open(join(dirname(__file__), 'README.rst')).read(),
+
+      include_package_data=True,
+      packages=find_packages(),
+
+      entry_points={
+          'console_scripts':
+              ['qotd = qotd:main']
+      },
+
       classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
@@ -44,6 +54,4 @@ setup(name='QuoteOfTheDay',
         'Programming Language :: Python :: 2.7',
         'Topic :: Other/Nonlisted Topic',
         ],
-      py_modules=['qotd'],
-      scripts=['scripts/qotd']
       )

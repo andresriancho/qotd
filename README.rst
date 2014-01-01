@@ -67,11 +67,14 @@ script at login time.
 
 Feedback and Bug reports:
 -------------------------
-See `this <http://bitbucket.org/wyuenho/qotd/>`_ BitBucket link.
+See `this <https://github.com/andresriancho/qotd>`_ GitHub repository.
 
 
 Release Notes:
 --------------
+- 0.7.3
+  Moved to GitHub and re-added to PyPi
+
 - 0.7.1
   No more ugly stacktraces when internet connection cannot be established 
 
